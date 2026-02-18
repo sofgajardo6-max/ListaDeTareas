@@ -1,0 +1,175 @@
+#fechalimite {
+    display: none;
+}
+
+.notificacion-css {
+    background: rgb(98, 231, 22);
+    color: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    z-index: 10000;
+}
+
+.notiEliminar {
+    background:rgb(219, 65, 65);
+}
+.notiGuardar {
+    background: rgb(0, 255, 0);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f2f8;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    background: white;
+    width: 100%;
+    max-width: 600px;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+    box-sizing: border-box; /* Asegura que el padding no agrande el cuadrado */
+}
+
+h1, h2 {
+    color: #6a1b9a;
+    text-align: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+button#agregarTarea {
+    width: 100%;
+    background-color: #8e24aa;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+button#agregarTarea:hover {
+    background-color: #380258;
+}
+
+#btnEliminarAPI {
+    background: none;
+    border: 1px solid #6a1b9a;
+    color: #6a1b9a;
+    padding: 20px 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: 0.3s;
+    max-width: 100%; /* Para que no se salga en pantallas chicas */
+}
+
+#btnEliminarAPI:hover {
+    background: #6a1b9a;
+    color: white
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#listaTareas {
+    list-style: none;
+    padding: 0px;
+    margin: 10px auto;
+    width: 100%;
+    max-width: 600px;
+}
+
+li {
+    background: white;
+    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: 18px;
+    border: 1px solid #e1bee7;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.tarea-header {
+    display: flex;
+    align-items: center; 
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.tarea-header input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.tarea-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.tarea-body {
+    margin-left: 32px;
+    margin-bottom: 10px; /* Espacio para que el texto no choque con el botón */
+}
+
+.btn-borrar {
+    background-color: #ff6f6f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 12px;
+    align-self: flex-end; 
+    margin-top: 10px;
+}
+
+/* Responsive: Se adapta a celulares */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    .container {
+        padding: 15px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .tarea-body {
+        margin-left: 0; 
+        text-align: left;
+    }
+    .btn-borrar {
+        width: 100%;
+        padding: 15px;
+    }
+}

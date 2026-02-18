@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de Tareas - Abp4</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Tareas</h1>
+
+            <input type="text" id="nuevaTarea" placeholder="Ingrese una nueva tarea" required>
+            <textarea name="descripcion" id="descripcionTarea" placeholder="Ingrese una descripción (opcional)"></textarea>
+            <div class="row">
+                <select id="prioridadTareas">
+                    <option value="">Seleccionar Prioridad</option>
+                    <option value="pendiente">Pendiente</option>
+                    <option value="importante">Importante</option>
+                    <option value="urgente">Urgente</option>
+                </select>
+                <input type="date" id="fechalimite">
+            </div>
+            <button id="agregarTarea">Agregar Tarea</button>
+    </div>  
+    <hr>
+        <button id="btnEliminarAPI">Quitar tareas de ejemplo</button> 
+        
+<ul id="listaTareas">
+</ul>
+
+    </div>
+
+    <script src="./assets/js/app.js"></script>
+</body>
+</html>
